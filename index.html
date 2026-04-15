@@ -5,17 +5,19 @@
 <title>AI 세미나 발표자료</title>
 <style>
   body{font-family:'Noto Sans KR',system-ui,sans-serif;background:#0D0D0D;color:#fff;min-height:100vh;margin:0;display:flex;align-items:center;justify-content:center;padding:2rem}
-  .wrap{max-width:760px;width:100%}
+  .wrap{max-width:1100px;width:100%}
   h1{font-size:clamp(1.8rem,3vw,2.4rem);font-weight:900;letter-spacing:-0.02em;margin:0 0 0.5rem}
   .meta{color:rgba(255,255,255,0.55);font-size:0.9rem;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:2.5rem}
-  .decks{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem}
-  @media(max-width:600px){.decks{grid-template-columns:1fr}}
+  .decks{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem}
+  @media(max-width:820px){.decks{grid-template-columns:1fr}}
   a.card{display:block;padding:2rem 1.5rem;border:1px solid rgba(255,255,255,0.1);border-radius:6px;background:rgba(255,255,255,0.02);text-decoration:none;color:#fff;transition:all .18s}
   a.card:hover{border-color:rgba(34,211,238,0.5);background:rgba(34,211,238,0.05)}
   a.card h2{margin:0 0 0.6rem;font-size:1.3rem;font-weight:800}
   a.card p{margin:0;color:rgba(255,255,255,0.7);font-size:0.95rem;line-height:1.5}
   a.card .tag{display:inline-block;margin-bottom:0.8rem;padding:2px 10px;border-radius:3px;background:rgba(34,211,238,0.15);color:#22d3ee;font-size:0.72rem;font-weight:700;letter-spacing:0.1em}
   .tag.audience-biz{background:rgba(251,191,36,0.15);color:#fbbf24}
+  .tag.audience-team{background:rgba(167,139,250,0.15);color:#a78bfa}
+  .tag.resource{background:rgba(255,255,255,0.08);color:rgba(255,255,255,0.7)}
   footer{margin-top:3rem;color:rgba(255,255,255,0.35);font-size:0.8rem}
 </style>
 </head>
@@ -34,8 +36,17 @@
       <h2>Claude Code Hands-on</h2>
       <p>도구·워크플로·작동 원리 — Part A 맥락 + Part B 실무 (2h)</p>
     </a>
+    <a class="card" href="controller-pl-presentation/">
+      <span class="tag audience-team">팀 내부</span>
+      <h2>S/W개발팀 AI PoC 현황</h2>
+      <p>컨트롤러 PL 리뷰용 — 팀 내 AI 도입 실험 정리와 다음 단계</p>
+    </a>
+    <a class="card" href="assets/">
+      <span class="tag resource">공통 리소스</span>
+      <h2>Assets</h2>
+      <p>images · videos · data · labs — 세 덱이 공유하는 소스 디렉토리</p>
+    </a>
   </div>
-  <footer>공통 리소스: <code>/assets</code> (images · videos · data · labs)</footer>
 </div>
 </body>
 </html>
