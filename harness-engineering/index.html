@@ -650,7 +650,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="comp" style="margin-top:5vh; max-width:980px;">
     <div class="comp-item">
       <div class="tag">실무 회고</div>
-      <p>"한 번 안에 완성된 사례 보고 <strong>0건</strong>"</p>
+      <p>한 번 안에 완성된 사례 <strong>0건</strong></p>
     </div>
     <div class="comp-item">
       <div class="tag">실패 원인</div>
@@ -795,7 +795,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <div class="slide violet">
   <p class="meta" style="color:rgba(255,255,255,0.4);">SECTION 04</p>
   <h1>검증과 <br>멈춤 신호</h1>
-  <p class="sub">루프를 <span class="em">멈출 권리</span>는 도구에게 줘라</p>
+  <p class="sub">루프를 <span class="em">멈출 권리</span>는 도구의 몫</p>
 </div>
 
 <!-- S27 Inference is too much like a slot machine -->
@@ -823,7 +823,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <tr><td><strong>자율 루프 운영자</strong></td><td>생성된 테스트 &middot; 고정된 문서 &middot; AGENTS.md</td><td>무인 루프가 돌려면 자동 멈춤 신호가 필수</td></tr>
     </tbody>
   </table>
-  <div class="note tip" style="margin-top:2vh;"><p>도구·언어가 달라도 공통 원칙: <strong>"agent가 자기 결과를 자기가 검증할 수 없다"</strong></p></div>
+  <div class="note tip" style="margin-top:2vh;"><p>도구·언어가 달라도 공통 원칙 &mdash; <strong style="color:#a78bfa;">agent가 자기 결과를 자기가 검증할 수 없다</strong></p></div>
 </div>
 
 <!-- S29 멈춤 신호 작동 방식 -->
@@ -953,7 +953,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     <div class="arch-layer"><div class="role" style="color:#fb923c;">아키텍처</div><div class="brand">시스템 설계 &middot; 모듈 경계 &middot; 데이터 모델</div><div class="desc" style="color:rgba(255,255,255,0.6);">되돌리기 어려움</div></div>
     <div class="arch-layer"><div class="role" style="color:#fb923c;">스키마</div><div class="brand">DB 스키마 &middot; API 계약 &middot; state machine</div><div class="desc" style="color:rgba(255,255,255,0.6);">호환성 영향 큼</div></div>
     <div class="arch-layer"><div class="role" style="color:#fb923c;">최종 리뷰</div><div class="brand">머지 직전 사람 review &middot; correctness/safety 확인</div><div class="desc" style="color:rgba(255,255,255,0.6);">책임 소재</div></div>
-    <div class="arch-layer"><div class="role" style="color:#fb923c;">scope</div><div class="brand">"이번엔 어디까지" 결정</div><div class="desc" style="color:rgba(255,255,255,0.6);">우선순위 판단</div></div>
+    <div class="arch-layer"><div class="role" style="color:#fb923c;">scope</div><div class="brand"><span style="color:#fb923c;">이번엔 어디까지</span> 결정</div><div class="desc" style="color:rgba(255,255,255,0.6);">우선순위 판단</div></div>
     <div class="arch-layer"><div class="role" style="color:#fb923c;">taste</div><div class="brand">UX &middot; 성능 trade-off &middot; 도메인 적합성</div><div class="desc" style="color:rgba(255,255,255,0.6);">맥락 의존</div></div>
   </div>
   <p class="sub" style="margin-top:2vh;"><span class="em">이해하지 못한 코드는 출시하지 않는다</span> &mdash; 모든 운영 사례의 공통 마지노선</p>
@@ -976,7 +976,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <p>리뷰는 사람이 해야 하니<br><strong>병목은 그대로</strong></p>
     </div>
   </div>
-  <p class="sub" style="margin-top:3vh;">"병렬로 돌려봤자 <span class="em">리뷰가 사람이라 병목은 똑같다</span>" &mdash; 회의주의 관점의 일관된 지적</p>
+  <p class="sub" style="margin-top:3vh;">병렬로 돌려봤자 <span class="em">리뷰가 사람이라 병목은 똑같다</span> &mdash; 회의주의 관점의 일관된 지적</p>
 </div>
 
 <!-- S38 인지 노동의 병목 이동 -->
@@ -1013,7 +1013,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
     </div>
     <div class="comp-item">
       <div class="tag" style="color:#fca5a5;">오해</div>
-      <p>"MCP만 붙이면 다 된다"는<br><strong>실무에서 빠르게 약화</strong></p>
+      <p><span style="color:#fca5a5;">MCP만 붙이면 다 된다</span><br>실무에서 <strong>빠르게 약화</strong></p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;">MCP는 <span class="em">접근 채널</span>이지 <strong>해결책의 자동화</strong>가 아니다</p>
@@ -1168,7 +1168,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <p>세션 종료 시<br><strong>최종 검증 / 알림</strong><br>상태 체크포인트</p>
     </div>
   </div>
-  <p class="sub" style="margin-top:2vh;">"<span class="em">CLAUDE.md에 적은 룰</span>은 1번 따르고, 훅은 <strong style="color:#fff;">매번 자동으로 집행</strong>" &mdash; 지침과 행위의 간극을 메우는 도구</p>
+  <p class="sub" style="margin-top:2vh;"><span class="em">CLAUDE.md에 적은 룰</span>은 1번 따르고, 훅은 <strong style="color:#fff;">매번 자동으로 집행</strong> &mdash; 지침과 행위의 간극을 메우는 도구</p>
 </div>
 
 <!-- S49 패턴 4 — pre-approved 권한 -->
@@ -1209,7 +1209,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <div class="source">SW 개발 시간당 비용 (loop)</div>
     </div>
   </div>
-  <p class="sub" style="margin-top:3vh;">"한 작업당 얼마"가 보이면 <span class="em">harness 변경의 효과</span>도 측정 가능 &mdash; theater 방지의 출발점</p>
+  <p class="sub" style="margin-top:3vh;"><span class="em">한 작업당 얼마</span>가 보이면 harness 변경의 효과도 측정 가능 &mdash; theater 방지의 출발점</p>
 </div>
 
 <!-- S51 패턴 6 — Worktree 격리 -->
@@ -1313,7 +1313,7 @@ cd ../feat-x &amp;&amp; claude</pre>
       <p style="font-size:0.92rem;">코딩이 아닌 검토가 critical path</p>
     </div>
   </div>
-  <p class="sub" style="margin-top:3vh;">AI에게 <span class="em">"이건 안 된다"고 말하는 디시플린</span>이 새로운 핵심 역량</p>
+  <p class="sub" style="margin-top:3vh;">AI에게 <span class="em">이건 안 된다고 말하는 디시플린</span>이 새로운 핵심 역량</p>
 </div>
 
 <!-- S56 1개 약속 -->
