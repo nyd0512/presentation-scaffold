@@ -213,7 +213,32 @@
 
 ---
 
-## Codex 패널 cross-check 결과 (2026-04-25 추가 검증)
+## REQUIREMENTS.md 명세 기반 검증 (2026-04-25 최종)
+
+> 사용자 누적 30+ iteration 요구사항을 7 카테고리 범용 룰로 정리한 `REQUIREMENTS.md` 기준 chrome 자동 검증 결과.
+
+### 카테고리별 PASS/FAIL
+
+| 카테고리 | 룰 | 측정값 | 상태 |
+|---|---|---|---|
+| **A1** | 본문 인물명 노출 (S04 grid 제외) | 0건 | ✅ PASS |
+| **A5** | 메타 표기 ("고급편/2시간 워크숍/DEV-SEMINAR 후속/지난 12개월") | 0건 | ✅ PASS |
+| **B1** | 명령형 헤더 ("...하라/만들라/확인하라") | 0건 | ✅ PASS |
+| **B2** | h1=112px / h3=23px UPPERCASE | 112 / 23 / true | ✅ PASS |
+| **C1** | 인라인 카드 슬라이드 (S04 외) | 0건 | ✅ PASS |
+| **C8** | Mac signal dots 마크업 | 0건 | ✅ PASS |
+| **C10** | 카드 사이즈 비대칭 >100px | 0건 | ✅ PASS |
+| **D1** | 본문 영어 표현 (Backpressure/Greenfield/Scaffolding/...) | 0건 | ✅ PASS |
+| **D3** | cite 표현 ("운영 회고/회의주의 시각...") | 0건 | ✅ PASS |
+| **D4** | 한국어 띄어쓰기 오류 (worktree 별 / Engineering 이란 등) | 0건 | ✅ PASS |
+| **E13** | Cover className | "slide samsung" | ✅ PASS |
+| **F1** | partMap 라벨 ↔ 헤딩 일치 | 0 drift | ✅ PASS |
+| **F2** | inert 토글 (비활성 슬라이드) | 62/62 | ✅ PASS |
+| **F3** | 장식 Phosphor 아이콘 aria-hidden | 13/13 | ✅ PASS |
+
+**총 위반: 0건**
+
+### Codex 패널 cross-check 결과 (1차/2차/3차)
 
 자동 측정 통과 후 codex-reviewer 패널이 추가 검출 → 즉시 수정.
 
