@@ -213,11 +213,41 @@
 
 ---
 
+## Codex 패널 cross-check 결과 (2026-04-25 추가 검증)
+
+자동 측정 통과 후 codex-reviewer 패널이 추가 검출 → 즉시 수정.
+
+### HIGH (CSS specificity로 의미 색상 손실) — **fixed**
+- `.comp-item .tag {color:!important}` → 인라인 그린/로즈 색 덮어 표지판 의미 손실
+- `.arch-layer .role {color:!important}` → 인라인 색 덮음
+- `.pill {color:!important}` → `.pill.amber` 덮음
+
+수정: `:not([style*="color"])` 셀렉터로 인라인 색 보존 + `.pill:not(.amber):not(.warn):not(.green)` 셀렉터로 variant 색 보존.
+
+검증 (chrome 측정):
+- S13 표지판 tag1 = `rgb(52,211,153)` 그린 ✅
+- S13 표지판 tag2 = `rgb(252,165,165)` 로즈 ✅
+- S14 arch role = `rgb(251,146,60)` 오렌지 ✅
+
+### MED (모바일 / 코드 패널) — **fixed**
+- 인라인 grid/flex가 모바일 768px 룰 우회 → 추가 셀렉터로 collapse:
+  - `div[style*="display:grid"][style*="grid-template-columns:repeat"]{grid-template-columns:1fr!important}`
+  - `div[style*="display:flex"][style*="gap"]:not(.comp):not(.stat-grid):not(.two-col){flex-direction:column!important}`
+- 코드 패널 모바일 가로 잘림 → `pre{white-space:pre-wrap;word-break:break-all}`
+
+### LOW — **fixed**
+- "4 가지 위험" → "4가지 위험" (띄어쓰기)
+- `.slide.samsung{background:#0D0D0D}` 셀렉터 명시 추가
+- `@media(prefers-reduced-motion:reduce){.nav button{transition:none}}` 추가
+
+---
+
 ## 최종 평가
 
 **전체 페이지 PASS** — dev-seminar / non-dev-seminar 시리즈와 시각·구조·컴포넌트 모두 100% 정합.
 - 인라인 카드: 의도된 1건(S04)만 잔존
 - 모든 헤더 폰트: dev-seminar 표준 일치
-- accessibility (aria-label/keyboard nav) 통과
-- media 쿼리 (print/mobile) dev와 동일
+- accessibility (aria-label/keyboard nav/prefers-reduced-motion) 통과
+- media 쿼리 (print/mobile) dev와 동일 + 모바일 인라인 collapse 추가
+- CSS specificity 의미 색상 보존 (codex 패널 cross-check 후 fix)
 - 미세 비대칭 2건은 자연 동작 (PASS*)

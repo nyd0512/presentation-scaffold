@@ -125,7 +125,16 @@ html{font-size:117%}
   .two-col{flex-direction:column;gap:2vh}
   .tbl{display:block;overflow-x:auto}
   .nav{left:20px;bottom:20px}
+  /* 인라인 grid/flex 모바일 collapse */
+  div[style*="display:grid"][style*="grid-template-columns:repeat"]{grid-template-columns:1fr!important}
+  div[style*="display:flex"][style*="gap:"]:not(.comp):not(.stat-grid):not(.two-col){flex-direction:column!important}
+  /* 코드 패널 모바일 wrap */
+  pre{white-space:pre-wrap;word-break:break-all}
 }
+@media(prefers-reduced-motion:reduce){
+  .nav button{transition:none}
+}
+.slide.samsung{background:#0D0D0D}
 @media print{body{background:#fff;color:#000;overflow:visible}.nav,.progress,.part-label,.page-num{display:none}.slides{display:block}.slide{min-height:auto;page-break-after:always;background:#fff!important;color:#000!important;padding:2cm}.em,.red,.green,.yellow,.blue{color:#000!important}.sub{color:#333!important}}
 
 /* ===== VISIBILITY OVERRIDE (2026-04 — dev-seminar 표준) — 회색 가시성 일괄 상향 ===== */
@@ -135,9 +144,11 @@ html{font-size:117%}
 cite{font-size:0.92rem!important;color:rgba(255,255,255,0.85)!important}
 .tbl th{font-size:clamp(0.85rem,1.05vw,1rem)!important;color:rgba(255,255,255,0.9)!important}
 .tbl td{font-size:clamp(1.02rem,1.3vw,1.2rem)!important;color:rgba(255,255,255,0.95)!important}
-.comp-item .tag{font-size:0.85rem!important;color:rgba(255,255,255,0.88)!important}
+.comp-item .tag{font-size:0.85rem!important}
+.comp-item .tag:not([style*="color"]){color:rgba(255,255,255,0.88)!important}
 .comp-item p{font-size:clamp(1.1rem,1.5vw,1.4rem)!important;color:rgba(255,255,255,0.96)!important;line-height:1.55!important}
-.arch-layer .role{font-size:0.95rem!important;color:rgba(255,255,255,0.88)!important;font-weight:500}
+.arch-layer .role{font-size:0.95rem!important;font-weight:500}
+.arch-layer .role:not([style*="color"]){color:rgba(255,255,255,0.88)!important}
 .arch-layer .brand{font-size:clamp(1.15rem,1.5vw,1.38rem)!important;color:#fff!important;line-height:1.4!important}
 .arch-layer .desc{font-size:clamp(1rem,1.2vw,1.15rem)!important;color:rgba(255,255,255,0.92)!important;line-height:1.5!important}
 .stat-card .label{font-size:0.92rem!important;color:rgba(255,255,255,0.92)!important;letter-spacing:0.14em}
@@ -149,7 +160,8 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 .qcard .qtext{font-size:clamp(1.4rem,2.2vw,2rem)!important;color:#fff!important;line-height:1.55!important}
 .qcard{padding:36px 42px!important}
 .persona{font-size:0.92rem!important;color:rgba(255,255,255,0.92)!important;padding:8px 18px!important}
-.pill{font-size:0.88rem!important;color:rgba(255,255,255,0.92)!important;padding:6px 16px!important}
+.pill{font-size:0.88rem!important;padding:6px 16px!important}
+.pill:not(.amber):not(.warn):not(.green){color:rgba(255,255,255,0.92)!important}
 
 /* 인라인 낮은 opacity 회색 일괄 상향 */
 [style*="rgba(255,255,255,0.25)"]{color:rgba(255,255,255,0.82)!important}
@@ -1264,7 +1276,7 @@ cd ../feat-x &amp;&amp; claude</pre>
 
 <!-- S54 4 경고 -->
 <div class="slide in-rose">
-  <h3>실무자들이 명시한 <span class="em">4 가지 위험</span></h3>
+  <h3>실무자들이 명시한 <span class="em">4가지 위험</span></h3>
   <div class="arch-layers" style="margin-top:2vh;">
     <div class="arch-layer">
       <div class="role" style="color:#fca5a5;">위험 1</div>
