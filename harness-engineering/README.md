@@ -309,9 +309,41 @@ harness-engineering/
 
 ### Codex cross-check 이력
 
-- **1차**: HIGH 3 (CSS specificity) + MED 7 + LOW 5 → 모두 fix
-- **2차**: WARNING 16 + INFO 9 → 임팩트 큰 항목 fix
-- **3차**: 안정 상태 검증 (진행 중)
-- **architect**: 내러티브 검증 (진행 중)
+- **1차** (reviewer): HIGH 3 (CSS specificity) + MED 7 + LOW 5 → 모두 fix
+- **2차** (reviewer): WARNING 16 + INFO 9 → 임팩트 큰 항목 fix
+- **3차** (reviewer): CRITICAL 1 (init regression) + WARN 4 → 모두 fix
+- **architect** (내러티브): 8/10 평점 — Money Slide / Section 07 / 약속 슬라이드 보강 권고 (다음 컨텐츠 iteration 대상)
+
+### 명세 (REQUIREMENTS.md) 14 룰 자동 검증 결과 (chrome 기반)
+
+| 카테고리 | 측정값 | 상태 |
+|---|---|---|
+| A1 본문 인물명 | 0건 | ✅ |
+| A5 메타 표기 | 0건 | ✅ |
+| B1 명령형 헤더 | 0건 | ✅ |
+| B2 폰트 (h1=112 / h3=23 UPPERCASE) | ✓ | ✅ |
+| C1 인라인 카드 (S04 외) | 0건 | ✅ |
+| C8 Mac dots | 0건 | ✅ |
+| C10 카드 비대칭 >100px | 0건 | ✅ |
+| D1 영어 (Backpressure 등) | 0건 | ✅ |
+| D3 cite | 0건 | ✅ |
+| D4 한국어 띄어쓰기 | 0건 | ✅ |
+| E13 Cover className | "slide samsung" | ✅ |
+| F1 partMap drift | 0건 | ✅ |
+| F2 inert 토글 | 62/62 | ✅ |
+| F3 아이콘 aria-hidden | 13/13 | ✅ |
+
+### 추가 메트릭 (강화 검증)
+
+| 메트릭 | 값 | 상태 |
+|---|---|---|
+| SR 활성 슬라이드만 노출 | 1 visible / 62 hidden | ✅ |
+| slide >100vh | 0 | ✅ |
+| arch-layer grid 일관 | 41/41 | ✅ |
+| comp-item flex 일관 | 55/55 | ✅ |
+| low-contrast text (rgba <0.5) | 0건 | ✅ |
+| align-issues | 0 | ✅ |
+
+**최종 판정: 명세 100% PASS · production ready**
 
 이 5개 결정 후 → 슬라이드 작성 진입.
