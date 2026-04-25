@@ -52,9 +52,9 @@ cite{display:block;margin-top:24px;font-size:0.78rem;color:rgba(255,255,255,0.55
 .stat-card .value{font-family:'Figtree',sans-serif;font-size:clamp(2.5rem,5vw,4.5rem);font-weight:900;letter-spacing:-0.04em;line-height:1.1;color:#fff;margin-bottom:6px;padding-bottom:2px}
 .stat-card .source{font-size:0.78rem;color:rgba(255,255,255,0.55);letter-spacing:0.05em}
 .arch-layers{display:flex;flex-direction:column;gap:0;width:100%;max-width:780px;margin-top:3vh}
-.arch-layer{display:flex;align-items:center;gap:2vw;padding:2.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06)}
+.arch-layer{display:grid;grid-template-columns:140px 1fr auto;align-items:center;gap:2vw;padding:2.4vh 0;border-bottom:1px solid rgba(255,255,255,0.06)}
 .arch-layer:last-child{border-bottom:none}
-.arch-layer .role{width:auto;min-width:40px;margin-right:1.5vw;font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.12em;text-align:left}
+.arch-layer .role{font-size:0.78rem;color:rgba(255,255,255,0.45);text-transform:uppercase;letter-spacing:0.12em;text-align:left}
 .arch-layer .brand{flex:1;font-size:clamp(1.1rem,1.4vw,1.32rem);font-weight:700;color:#fff;text-align:left}
 .arch-layer .desc{flex-shrink:0;font-size:clamp(0.9rem,1.15vw,1.08rem);color:rgba(255,255,255,0.6);text-align:right;font-weight:300}
 .two-col{display:flex;gap:4vw;width:100%;max-width:1100px;margin-top:3vh}
@@ -160,7 +160,7 @@ h3{font-size:clamp(1rem,1.35vw,1.25rem)!important;color:rgba(255,255,255,0.78)!i
 .qcard{padding:36px 42px!important}
 .persona{font-size:0.92rem!important;color:rgba(255,255,255,0.92)!important;padding:8px 18px!important}
 .pill{font-size:0.88rem!important;padding:6px 16px!important}
-.pill:not(.amber):not(.warn):not(.green){color:rgba(255,255,255,0.92)!important}
+.pill:not(.amber){color:rgba(255,255,255,0.92)!important}
 
 /* 인라인 낮은 opacity 회색 일괄 상향 */
 [style*="rgba(255,255,255,0.25)"]{color:rgba(255,255,255,0.82)!important}
@@ -367,7 +367,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <tr>
         <td><strong>단위</strong></td>
         <td style="text-align:center;">1 prompt &middot; 1 호출</td>
-        <td style="text-align:center;">영구 변경 (commit)</td>
+        <td style="text-align:center;">영구 변경 (커밋)</td>
       </tr>
       <tr>
         <td><strong>수명</strong></td>
@@ -618,7 +618,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 
 <!-- S17 첫 두 단계 시작 -->
 <div class="slide in-blue">
-  <h3>그래서 &mdash; 첫 <span class="em">두 단계</span>로 시작하라</h3>
+  <h3>첫 <span class="em">두 단계</span>로 시작</h3>
   <div class="comp" style="margin-top:3vh; max-width:980px;">
     <div class="comp-item">
       <div class="tag" style="color:#fb923c;">STEP 01</div>
@@ -668,20 +668,20 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <h3>모두가 강조하는 한 단어 &mdash; <span class="em">분해</span></h3>
   <div class="comp" style="margin-top:3vh; max-width:1100px;">
     <div class="comp-item">
-      <div class="tag" style="color:#60a5fa;">① 계획</div>
-      <p><strong>PLAN</strong><br>전체 그림</p>
+      <div class="tag" style="color:#60a5fa;">① PLAN</div>
+      <p><strong>계획</strong><br>전체 그림 그리기</p>
     </div>
     <div class="comp-item">
-      <div class="tag" style="color:#fb923c;">② 조각</div>
-      <p><strong>SLICE</strong><br>실행 단위로 분할</p>
+      <div class="tag" style="color:#fb923c;">② SLICE</div>
+      <p><strong>조각</strong><br>실행 단위로 분할</p>
     </div>
     <div class="comp-item">
-      <div class="tag" style="color:#34d399;">③ 실행</div>
-      <p><strong>RUN</strong><br>한 조각씩 처리</p>
+      <div class="tag" style="color:#34d399;">③ RUN</div>
+      <p><strong>실행</strong><br>한 조각씩 처리</p>
     </div>
     <div class="comp-item">
-      <div class="tag" style="color:#c4b5fd;">④ 검증</div>
-      <p><strong>VERIFY</strong><br>각 단계 결과 확인</p>
+      <div class="tag" style="color:#c4b5fd;">④ VERIFY</div>
+      <p><strong>검증</strong><br>단계마다 결과 확인</p>
     </div>
   </div>
   <p class="sub" style="margin-top:3vh;"><span class="em">분해하지 않은 작업은 거의 실패</span> &mdash; 리서치 전반에서 일관된 보고</p>
@@ -729,17 +729,17 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <!-- S23 Ralph Loop — 10단계 레시피 -->
 <div class="slide in-rose">
   <h3>Ralph Loop 레시피 &mdash; <span class="em">10단계</span></h3>
-  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:0; row-gap:0; width:100%; max-width:1020px; margin-top:1vh;">
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">01</span><span style="color:rgba(255,255,255,0.92);">specs를 먼저 작성</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">02</span><span style="color:rgba(255,255,255,0.92);"><code>PROMPT.md</code>를 stable하게 유지</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">03</span><span style="color:rgba(255,255,255,0.92);">매 loop에 같은 컨텍스트 (specs, fix_plan)</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">04</span><span style="color:rgba(255,255,255,0.92);">한 번에 <strong>1개 작업만</strong> 요청</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">05</span><span style="color:rgba(255,255,255,0.92);">agent가 다음 가장 중요한 작업 선택</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">06</span><span style="color:rgba(255,255,255,0.92);">테스트/빌드를 <strong>자동 멈춤 신호</strong>로 강제</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">07</span><span style="color:rgba(255,255,255,0.92);">교훈을 <code>AGENTS.md</code>에 capture</span></div>
-    <div style="padding:1.4vh 1.6vw; border-bottom:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">08</span><span style="color:rgba(255,255,255,0.92);">plan 업데이트</span></div>
-    <div style="padding:1.4vh 1.6vw; border-right:1px solid rgba(255,255,255,0.06); display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">09</span><span style="color:rgba(255,255,255,0.92);">동작하는 단위로 커밋</span></div>
-    <div style="padding:1.4vh 1.6vw; display:flex; gap:12px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:0.85rem;">10</span><span style="color:rgba(255,255,255,0.92);">실패 패턴 반복 시 prompt 튜닝</span></div>
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:0; width:100%; max-width:1080px; margin-top:2vh;">
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); border-right:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">01</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">specs를 먼저 작성</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">02</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;"><code>PROMPT.md</code>를 안정적으로 유지</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); border-right:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">03</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">매 loop에 같은 컨텍스트 reload</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">04</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">한 번에 <strong>1개 작업만</strong> 요청</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); border-right:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">05</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">다음 작업은 agent가 결정</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">06</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">테스트/빌드로 <strong>자동 멈춤</strong> 강제</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); border-right:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">07</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">교훈을 <code>AGENTS.md</code>에 기록</span></div>
+    <div style="padding:2vh 2vw; border-bottom:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">08</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">plan 업데이트</span></div>
+    <div style="padding:2vh 2vw; border-right:1px solid rgba(255,255,255,0.08); display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">09</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">동작하는 단위로 커밋</span></div>
+    <div style="padding:2vh 2vw; display:flex; gap:16px; align-items:baseline;"><span style="color:#fb923c; font-family:'JetBrains Mono',monospace; font-size:1.1rem; font-weight:700;">10</span><span style="color:rgba(255,255,255,0.95); font-size:1.08rem;">실패 반복 시 prompt 튜닝</span></div>
   </div>
   <div class="note warn" style="margin-top:2vh;"><p><strong style="color:#fca5a5;">조심:</strong> Ralph Loop는 <span style="color:#fff; font-weight:700;">신규 코드베이스 부트스트래핑에만 적합</span> &mdash; 기존 코드베이스에 적용은 위험</p></div>
 </div>
@@ -747,24 +747,21 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <!-- S24 Spec = durable memory -->
 <div class="slide in-rose">
   <h3>Spec은 <span class="em">매 loop에 reload되는 메모리</span></h3>
-  <div class="comp" style="margin-top:2vh;">
+  <div class="comp" style="margin-top:3vh;">
     <div class="comp-item">
-      <i class="ph-fill ph-file-doc" style="font-size:2.2rem; color:#fb923c;"></i>
-      <div class="tag">spec 파일</div>
-      <p>요구사항을 <strong>파일당 1개</strong>로<br>모델과 대화하며 작성</p>
+      <div class="tag" style="color:#fb923c;">spec 파일</div>
+      <p><strong>파일당 1개</strong><br>모델과 대화하며 작성</p>
     </div>
     <div class="comp-item">
-      <i class="ph-fill ph-arrows-clockwise" style="font-size:2.2rem; color:#a5b4fc;"></i>
-      <div class="tag">새 세션</div>
-      <p>매 세션마다 spec을 다시 읽음<br><strong>대화 history 의존도 0</strong></p>
+      <div class="tag" style="color:#a5b4fc;">새 세션</div>
+      <p><strong>매번 spec 재로드</strong><br>대화 history 의존도 0</p>
     </div>
     <div class="comp-item">
-      <i class="ph-fill ph-database" style="font-size:2.2rem; color:#34d399;"></i>
-      <div class="tag">durable memory</div>
-      <p>plan/spec/AGENTS.md가<br><strong>세션 사이의 영구 기억</strong></p>
+      <div class="tag" style="color:#34d399;">durable memory</div>
+      <p><strong>plan / AGENTS.md</strong><br>세션 사이의 영구 기억</p>
     </div>
   </div>
-  <p class="sub" style="margin-top:2vh;">spec은 <span class="em">매 세션마다 다시 읽히는 메모리</span> &mdash; 대화 history에 의존하지 않는 운영 단위</p>
+  <p class="sub" style="margin-top:3vh;">spec은 <span class="em">매 세션마다 다시 읽히는 메모리</span> &mdash; 대화 history에 의존하지 않는 운영 단위</p>
 </div>
 
 <!-- S25 작업 단위 분리 -->
@@ -806,7 +803,6 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="qcard">
 <p class="qtext">추론은 <span class="em">슬롯머신</span>과 너무 닮았다</p>
   </div>
-  <cite style="margin-top:3vh;">&mdash; 회의주의 시각의 운영 회고 (2025)</cite>
   <p class="sub" style="margin-top:4vh;">결과가 좋아 보여도 <span class="em">검증되지 않은 추론은 검증된 적이 없다</span></p>
 </div>
 
@@ -859,7 +855,6 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="qcard">
 <p class="qtext"><span class="em">실패가 명시적이면</span> 견딜만 하다.<br>문제는 <span class="em">조용히 멈추는 것</span></p>
   </div>
-  <cite style="margin-top:3vh;">&mdash; 운영 회고 (2025)</cite>
   <p class="sub" style="margin-top:4vh;">실패는 명시적이어야 <span class="em">멈춤 신호</span>가 됨 &mdash; 조용히 멈춘 agent가 진짜 문제</p>
 </div>
 
@@ -989,7 +984,6 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
   <div class="qcard">
 <p class="qtext">파이프라인의 한 부분이 <span class="em">극적으로 빨라지면</span><br>입력을 <span class="em">덜 흘려보내야</span> 한다</p>
   </div>
-  <cite style="margin-top:3vh;">&mdash; 검토 병목 관련 운영 회고 (2026)</cite>
   <p class="sub" style="margin-top:4vh;">AI가 빨라진 만큼 <span class="em">사람의 검토 대역폭</span>이 새로운 병목</p>
 </div>
 
@@ -1000,7 +994,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <!-- S39 Section 06 opener -->
 <div class="slide cyan">
   <p class="meta" style="color:rgba(255,255,255,0.4);">SECTION 06</p>
-  <h1>만능론을 경계하다</h1>
+  <h1>만능론을 경계</h1>
   <p class="sub">실무자들이 <span class="em">함께 부정</span>하는 것들</p>
 </div>
 
@@ -1068,7 +1062,6 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
 <div class="slide in-cyan">
   <h3>그리고 &mdash; <span class="em">프롬프트 재치</span> 신화</h3>
   <blockquote style="margin-top:3vh;">프롬프트가 마법이 아니라,<br><span class="em">루프 + 멈춤 신호</span>가 시스템이다</blockquote>
-  <cite style="margin-top:3vh;">&mdash; 자율 루프 운영 회고 (2025)</cite>
   <p class="sub" style="margin-top:4vh;">프롬프트 한 줄 더 잘 쓰는 게 아니라 &mdash; <span class="em">매 loop마다 같은 컨텍스트가 reload되는 시스템</span>을 만드는 일</p>
 </div>
 
@@ -1155,7 +1148,7 @@ pre{font-family:'JetBrains Mono','Consolas',monospace}
       <p style="color:rgba(255,255,255,0.85); font-size:0.95rem; margin-top:6px;">read-only 코드베이스 탐색</p>
     </div>
   </div>
-  <div class="note tip" style="margin-top:2vh;"><p><code>.claude/agents/</code> 에 <strong>역할별로</strong> 정의 &middot; 메인 컨텍스트 보호 + 토큰 절약</p></div>
+  <div class="note tip" style="margin-top:2vh;"><p><code>.claude/agents/</code>에 <strong>역할별로</strong> 정의 &middot; 메인 컨텍스트 보호 + 토큰 절약</p></div>
 </div>
 
 <!-- S48 패턴 3 — PostToolUse / Stop hook -->
@@ -1421,6 +1414,7 @@ cd ../feat-x &amp;&amp; claude</pre>
 <div class="page-num" id="pageNum">1 / 1</div>
 <script>
 const slides=document.querySelectorAll('.slide'),total=slides.length;
+document.querySelectorAll('i[class*="ph-"]').forEach(i=>{if(!i.hasAttribute('aria-label'))i.setAttribute('aria-hidden','true')});
 let current=0;
 const pageNumEl=document.getElementById('pageNum'),progressEl=document.getElementById('progress'),partLabelEl=document.getElementById('partLabel');
 const partMap=[
@@ -1432,7 +1426,7 @@ const partMap=[
   {from:19,to:26,label:'03 한 방의 환상'},
   {from:27,to:33,label:'04 검증과 멈춤 신호'},
   {from:34,to:39,label:'05 인간 개입 스펙트럼'},
-  {from:40,to:45,label:'06 만능론을 경계하다'},
+  {from:40,to:45,label:'06 만능론을 경계'},
   {from:46,to:53,label:'07 실전 패턴 카탈로그'},
   {from:54,to:58,label:'08 4개 경고와 1개 약속'},
   {from:59,to:62,label:'클로징'}
@@ -1442,12 +1436,12 @@ function update(){if(!pageNumEl||!progressEl)return;pageNumEl.textContent=`${cur
 function goTo(i){if(total===0)return;if(i<0)i=0;if(i>=total)i=total-1;current=i;document.getElementById('slides').style.transform=`translateX(-${current*100}vw)`;history.replaceState(null,'','#'+(current+1));slides.forEach((s,idx)=>{if(idx===current){s.removeAttribute('inert');s.removeAttribute('aria-hidden')}else{s.setAttribute('inert','');s.setAttribute('aria-hidden','true')}});update();}
 function next(){goTo(current+1);}
 function prev(){goTo(current-1);}
-document.addEventListener('keydown',e=>{const tag=document.activeElement.tagName;if(tag==='INPUT'||tag==='TEXTAREA'||document.activeElement.isContentEditable)return;switch(e.key){case'ArrowRight':case' ':case'PageDown':e.preventDefault();next();break;case'ArrowLeft':case'PageUp':e.preventDefault();prev();break;case'Home':e.preventDefault();goTo(0);break;case'End':e.preventDefault();goTo(total-1);break;case'f':case'F':const el=document.documentElement;const isFs=document.fullscreenElement||document.webkitFullscreenElement;if(!isFs){(el.requestFullscreen||el.webkitRequestFullscreen).call(el)?.catch(()=>{});}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)?.catch(()=>{});}break;}});
+document.addEventListener('keydown',e=>{const tag=document.activeElement.tagName;if(tag==='INPUT'||tag==='TEXTAREA'||tag==='BUTTON'||document.activeElement.isContentEditable)return;switch(e.key){case'ArrowRight':case' ':case'PageDown':e.preventDefault();next();break;case'ArrowLeft':case'PageUp':e.preventDefault();prev();break;case'Home':e.preventDefault();goTo(0);break;case'End':e.preventDefault();goTo(total-1);break;case'f':case'F':const el=document.documentElement;const isFs=document.fullscreenElement||document.webkitFullscreenElement;if(!isFs){(el.requestFullscreen||el.webkitRequestFullscreen).call(el)?.catch(()=>{});}else{(document.exitFullscreen||document.webkitExitFullscreen).call(document)?.catch(()=>{});}break;}});
 let tx=0,ty=0;
 document.addEventListener('touchstart',e=>{if(e.touches.length>1)return;tx=e.touches[0].clientX;ty=e.touches[0].clientY;},{passive:true});
 document.addEventListener('touchend',e=>{if(e.changedTouches.length>1)return;const dx=tx-e.changedTouches[0].clientX,dy=ty-e.changedTouches[0].clientY;if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)){if(dx>0)next();else prev();}},{passive:true});
 const initSlide=parseInt(location.hash.slice(1))-1;
-if(!isNaN(initSlide)&&initSlide>=0)goTo(initSlide);else update();
+if(!isNaN(initSlide)&&initSlide>=0)goTo(initSlide);else goTo(0);
 window.addEventListener('hashchange',()=>{const i=parseInt(location.hash.slice(1))-1;if(!isNaN(i)&&i>=0&&i!==current)goTo(i);});
 </script>
 </body>

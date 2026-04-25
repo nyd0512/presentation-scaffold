@@ -276,8 +276,9 @@ hover transform 0 (정적 시리즈 일관성)
 
 ```
 harness-engineering/
-├── index.html              (1443줄, 63 슬라이드)
+├── index.html              (1455줄, 63 슬라이드)
 ├── README.md               (이 문서)
+├── audit-report.md         (페이지별 검증 보고서)
 ├── reference-deck-transcript.md  (참고 영상 31장 OCR)
 └── research-raw/
     ├── boris-cherny.md
@@ -287,5 +288,30 @@ harness-engineering/
     ├── mitchell-hashimoto.md
     └── synthesis-framework.md
 ```
+
+### git 커밋 이력
+
+| 커밋 | 내용 |
+|---|---|
+| `a74a04f` | 신규 발표자료 (63 슬라이드) + 디자인 audit |
+| `95cc793` | per-slide navigate 측정 audit-report 재작성 |
+| `ea59bc9` | codex 1차 fix (CSS specificity + 모바일 + a11y) |
+| `f65041b` | codex 2차 fix (한국어 + br 공백 + collapse overmatch) |
+| `7ca3af7` | a11y inert + 아이콘 SR 묵음 + dead code 정리 |
+
+### 마지막 검증 결과 (chrome 자동 측정)
+
+- **63/63 PASS** · overflow 0 · dense 0
+- 인라인 카드: 1 (S04 5인 grid 의도)
+- 모바일 collapse 정확화 (repeat() grid만)
+- a11y: aria-label / inert 토글 / 아이콘 speak:none / prefers-reduced-motion / keyboard nav
+- dev-seminar 시각·구조 정합도: 17/17 메트릭 일치
+
+### Codex cross-check 이력
+
+- **1차**: HIGH 3 (CSS specificity) + MED 7 + LOW 5 → 모두 fix
+- **2차**: WARNING 16 + INFO 9 → 임팩트 큰 항목 fix
+- **3차**: 안정 상태 검증 (진행 중)
+- **architect**: 내러티브 검증 (진행 중)
 
 이 5개 결정 후 → 슬라이드 작성 진입.
